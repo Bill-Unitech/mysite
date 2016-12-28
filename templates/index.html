@@ -1,0 +1,941 @@
+<!DOCTYPE html>{% load static %}
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head>
+    
+    <meta name="viewport" content="width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;" />
+    <link rel="shortcut icon" href={% static "images/favicon.ico" %} />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href={% static "images/apple-touch-icon-144-precomposed.png" %} />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href={% static "images/apple-touch-icon-114-precomposed.png"  %}/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href={% static "images/apple-touch-icon-72-precomposed.png"  %}/>
+    <link rel="apple-touch-icon-precomposed" href={% static "images/apple-touch-icon-57-precomposed.png" %} />
+    <title>Home Page</title>
+    <link href={% static "css/bootstrap.min.css"  %} type="text/css" rel="stylesheet" />
+    <link href={% static "css/style.css" %} type="text/css" rel="stylesheet" />
+    <link href={% static "css/prettyPhoto.css" %} type="text/css" rel="stylesheet" />
+    <link href={% static "css/font-icomoon.css" %} type="text/css" rel="stylesheet" />
+    <link href={% static "css/font-awesome.css" %} type="text/css" rel="stylesheet" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href={% static "assets/css/font-awesome-ie7.css" %}/>
+    <![endif]-->
+    <script type="text/javascript" src={% static "js/jquery.min.js"%}></script>
+    <script type="text/javascript" src={% static "js/bootstrap.min.js"%}></script>
+    <script type="text/javascript" src={% static "js/jquery.easing.1.3.js"%}></script>
+    <script type="text/javascript" src={% static "js/jquery.quicksand.js"%}></script>
+    <script type="text/javascript" src={% static "js/superfish.js"%}></script>
+    <script type="text/javascript" src={% static "js/hoverIntent.js"%}></script>
+    <script type="text/javascript" src={% static "js/jquery.flexslider.js"%}></script>
+    <script type="text/javascript" src={% static "js/jflickrfeed.min.js"%}></script>
+    <script type="text/javascript" src={% static "js/jquery.prettyPhoto.js"%}></script>
+    <script type="text/javascript" src={% static "js/jquery.elastislide.js"%}></script>
+    <script type="text/javascript" src={% static "js/jquery.tweet.js"%}></script>
+    <script type="text/javascript" src={% static "js/smoothscroll.js"%}></script>
+    <script type="text/javascript" src={% static "js/jquery.ui.totop.js"%}></script>
+    <script type="text/javascript" src={% static "js/main.js"%}></script>
+    <script type="text/javascript" src={% static "js/ajax-mail.js"%}></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+
+<!--top menu-->
+<section id="top-menu">
+    <div class="container">
+        <div class="row">
+         </div>
+    </div>
+</section>
+
+<!--header-->
+<header id="header">
+    <div class="container">
+        <div class="row header-top">
+            <div class="span5 logo">
+                <a class="logo-img" href="./index.html" title="responsive template"><img src={% static "example/logo.png" %} alt="Tabulate" /></a>
+                <p class="tagline">Do Things That Matters</p>
+            </div>
+            <div class="span7 social-container">
+                <p class="phone hidden-phone"><i class="icon-envelope"></i> bill.qjh@gmail.com</p>
+                <!--
+                <p class="phone hidden-phone"><i class="icon-bell"></i> Call Us +1 800 123 45 67</p>
+                -->
+                <div class="top-social">
+                    <a data-original-title="Facebook" rel="tooltip" data-placement="top" class="facebook" href="#"></a>
+
+                    <a data-original-title="Twitter" rel="tooltip" data-placement="top" class="twitter2" href="#"></a>
+
+                    <a data-original-title="Dribble" rel="tooltip" data-placement="top" class="dribbble" href="#"></a>
+
+                    <a data-original-title="Digg" rel="tooltip" data-placement="top" class="digg" href="#"></a>
+
+                    <a data-original-title="DeviantArt" rel="tooltip" data-placement="top" class="dart" href="#"></a>
+
+                    <a data-original-title="Market" rel="tooltip" data-placement="top" class="market" href="#"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row header-nav">
+           <div class="span12">
+                <nav id="menu" class="clearfix">
+                    <ul>
+                        <li class="current"><a href="./"><span class="name">Home</span></a>
+                            <!--ul>
+                                <li><a href="./index.html">Home Page 1</a></li>
+                                <li><a href="./index2.html">Home Page 2</a></li>
+                                <li><a href="./index3.html">Home Page 3</a></li>
+                            </ul-->
+                        </li>
+
+                        <li><a href="/course/"><span class="name">Courses</span></a>
+                            <!--ul>
+                                <li><a href="./portfolio2.html">Web Development</a>
+                                    <ul>
+                                        <li><a href="./portfolio2.html">Portfolio 2 Columns</a></li>
+                                        <li class="last"><a href="./portfolio2ex.html">Portfolio 2 Columns Extended</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./portfolio3.html">Data Analyzing</a>
+                                    <ul>
+                                        <li><a href="./portfolio3.html">Portfolio 3 Columns</a></li>
+                                        <li class="last"><a href="./portfolio3ex.html">Portfolio 3 Columns Extended</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./portfolio4.html">Machine Learning</a>
+                                    <ul>
+                                        <li><a href="./portfolio4.html">Portfolio 4 Columns</a></li>
+                                        <li class="last"><a href="./portfolio4ex.html">Portfolio 4 Columns Extended</a></li>
+                                    </ul>
+                                </li>
+                                <li class="last"><a href="./portfolio-single.html">Penetration Test</a></li>
+                            </ul-->
+                        </li>
+                        <li><a href="/blog/"><span class="name">Blogs</span></a>
+                            <!--ul>
+                                <li><a href="./blog-sidebar-right.html">Blog - Sidebar Right</a></li>
+                                <li><a href="./blog-sidebar-left.html">Blog - Sidebar Left</a></li>
+                                <li><a href="./blog-type-1.html">Blog Type 1</a></li>
+                                <li><a href="./blog-type-2.html">Blog Type 2</a></li>
+                                <li class="last"><a href="./blog-single.html">Blog Single</a></li>
+                            </ul-->
+                        </li>
+                        <li><a href="/contact/"><span class="name">Contacts</span></a></li>
+                    </ul>
+                </nav>
+               <!--<form class="top-search pull-right">-->
+                       <!--<input type="text" placeholder="text here..." class="span3">-->
+                       <!--<button type="button" class="btn"><i class="icon-search-form"></i></button>-->
+               <!--</form>-->
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--slider-->
+<section id="slider">
+    <div class="container">
+        <div class="row">
+
+            <div class="span12">
+                <div id="mainslider" class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <img src={% static "example/slider123.jpg"%} alt="" />
+                            <div class="slide-caption">
+                                <h3 class="slide-title">Python是一项非常强大的编程语言，通过对Python的运用，我们更加深入地去学习数据分析，机器学习，以及渗透测试。  </h3>
+                                <p class="slide-subtitle">Lists (known as arrays in other languages) are one of the compound data types that Python understands. Lists can be indexed, sliced and manipulated with other built-in functions.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src={% static "example/slider2.jpg"%} alt="" />
+                            <div class="slide-caption">
+                                <h3 class="slide-title">Python在设计上坚持了清晰划一的风格，这使得Python成为一门易读、易维护，并且被大量用户所欢迎的、用途广泛的语言。</h3>
+                                <p class="slide-subtitle">设计者开发时总的指导思想是，对于一个特定的问题，只要有一种限制性很强的语法，使得不好的编程习惯（例如if语句的下一行不向右缩进）都不能通过编译。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src={% static "example/slider3.jpg"%} alt="" />
+                            <div class="slide-caption">
+                                <h3 class="slide-title">机器学习(Machine Learning, ML)是一门多领域交叉学科，涉及概率论、统计学、逼近论、凸分析、算法复杂度理论等多门学科。</h3>
+                                <p class="slide-subtitle">专门研究计算机怎样模拟或实现人类的学习行为，以获取新的知识或技能，重新组织已有的知识结构使之不断改善自身的性能。它是人工智能的核心，是使计算机具有智能的根本途径，其应用遍及人工智能的各个领域，它主要使用归纳、综合而不是演绎。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src={% static "example/slider4.jpg"%} alt="" />
+                            <div class="slide-caption">
+                                <h3 class="slide-title">Machine learning is the subfield of computer science that "gives computers the ability to learn without being explicitly programmed"</h3>
+                                <p class="slide-subtitle">Tom M. Mitchell provided a widely quoted, more formal definition: "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E." </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--container-->
+<section id="container">
+    <div class="container">
+    <div class="row">
+        <div class="span12">
+                <!--p class="text-error">我是一名爱好计算机技术并且喜欢语言文学的程序员。我希望在这里能够认识更多志同道合的朋友，和大家一起提升自己的知识与技能，在开发各种有创新项目的同时也能够用有限的生命做一些有意义的事情。我会制作免费的视频和文档，通过重复的失败与探索，一步一步向前迈进。</p>
+                <p class="text-info">I am a humble programmer who loves coding and both chinese and english literature. I'm hoping to make friends through this website and do something that matters with coders who have the same vision as me. I will be making vedios and writing blogs, hope you'd like them.</p-->
+                <blockquote>
+                <h5>Here's to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They're not fond of rules. And they have no respect for the status quo. You can quote them, disagree with them, glorify or vilify them. About the only thing you can't do is ignore them. Because they change things. They push the human race forward. And while some may see them as the crazy ones, we see genius. Because the people who are crazy enough to think they can change the world, are the ones who do.</h5>
+                <p align="right"><small>Rob Siltanen</small></p>
+                </blockquote>
+            
+        </div>
+    </div>
+
+    
+
+
+
+    <div class="row highlights">
+        <div class="span3">
+            <div class="hl-circle">
+                <a class="hl-icon1" href="#">service</a>
+            </div>
+
+            <div class="highlights-content clearfix">
+                <h5>Web Development</h5>
+
+                <p>
+                    这里是学习的第一步，掌握了web开发的技能之后，再进一步的学习数据和渗透相关的知识，学海无涯。
+                </p>
+
+                <a class="btn-small btn-hl" href="#">
+                    <span>Reading List</span>
+                </a><!-- button small end -->
+            </div>
+        </div>
+        <div class="span3 ">
+            <div class="hl-circle">
+                <a class="hl-icon2" href="#">service</a>
+            </div>
+
+            <div class="highlights-content clearfix">
+                <h5>Data Analyzing</h5>
+
+                <p>
+                    我认为数据分析对于当代技术人员来说，无论是身处哪个行业，都是非常重要的必备技能。
+                </p>
+
+                <a class="btn-small btn-hl" href="#">
+                    <span>Reading List</span>
+                </a><!-- button small end -->
+            </div>
+        </div>
+        <div class="span3">
+            <div class="hl-circle">
+                <a class="hl-icon3" href="#">service</a>
+            </div>
+
+            <div class="highlights-content clearfix">
+                <h5>Machine Learning</h5>
+
+                <p>
+                    机器学习现在是一个很火爆的方向，也可以应用到各行各业，我希望也能将它应用到我平日的工作中去。
+                </p>
+
+                <a class="btn-small btn-hl" href="#">
+                    <span>Reading List</span>
+                </a><!-- button small end -->
+            </div>
+        </div>
+        <div class="span3 highlights">
+            <div class="hl-circle">
+                <a class="hl-icon4" href="#">service</a>
+            </div>
+
+            <div class="highlights-content clearfix">
+                <h5>Penetration Test</h5>
+
+                <p>
+                    从小就对网络安全有着浓厚的兴趣，所以读书也选择了计算机专业，我也永远只是一名小学生。
+                </p>
+
+                <a class="btn-small btn-hl" href="#">
+                    <span>Reading List</span>
+                </a><!-- button small end -->
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+
+        <div class="row">
+        <div class="span12 our-works"><h4>Recent Videos</h4></div>
+        <div class="span12">
+            <div id="our-projects" class="carousel bttop">
+                <div class="carousel-wrapper">
+                    <ul class="portfolio">
+                        <li>
+                            <article>
+                                <div class="inner-image">
+                                    <a href={% static "example/video_covers/python_basics_cover.jpg"%} data-rel="prettyPhoto">
+                                        <img src={% static "example/video_covers/python_basics_cover.jpg"%} alt="" />
+                                        <span class="frame-overlay"></span>
+                                    </a>
+                                </div>
+                                <div class="sliding">
+                                    <div class="inner-text">
+                                        <h4 class="title"><a href="https://www.youtube.com/playlist?list=PLyhyCShXnonKDHfDpsPMEkZQint391jS2">Python Basics</a></h4>
+                                        <p>最基础的Python教程</p> 
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div class="inner-image">
+                                    <a href={% static "example/view.jpg"%} data-rel="prettyPhoto">
+                                        <img src={% static "example/latest2.jpg"%} alt="" />
+                                        <span class="frame-overlay"></span>
+                                    </a>
+                                </div>
+                                <div class="sliding">
+                                    <div class="inner-text">
+                                        <h4 class="title"><a href="./portfolio-single.html">Project title 2</a></h4>
+                                        <p>i'm still working on this part ~~</p>
+
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div class="inner-image">
+                                    <a href={% static "example/view.jpg"%} data-rel="prettyPhoto">
+                                        <img src={% static "example/latest3.jpg"%} alt="" />
+                                        <span class="frame-overlay"></span>
+                                    </a>
+                                </div>
+                                <div class="sliding">
+                                    <div class="inner-text">
+                                        <h4 class="title"><a href="./portfolio-single.html">Project title 3</a></h4>
+                                        <p>i'm still working on this part ~~</p>
+
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div class="inner-image">
+                                    <a href={% static "example/view.jpg"%} data-rel="prettyPhoto">
+                                        <img src={% static "example/latest4.jpg"%} alt="" />
+                                        <span class="frame-overlay"></span>
+                                    </a>
+                                </div>
+                                <div class="sliding">
+                                    <div class="inner-text">
+                                        <h4 class="title"><a href="./portfolio-single.html">Project title 4</a></h4>
+                                        <p>i'm still working on this part ~~</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div class="inner-image">
+                                    <a href={% static "example/view.jpg"%} data-rel="prettyPhoto">
+                                        <img src={% static "example/latest5.jpg"%} alt="" />
+                                        <span class="frame-overlay"></span>
+                                    </a>
+                                </div>
+                                <div class="sliding">
+                                    <div class="inner-text">
+                                        <h4 class="title"><a href="./portfolio-single.html">Project title 5</a></h4>
+                                        <p>i'm still working on this part ~~</p>
+
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div class="inner-image">
+                                    <a href={% static "example/view.jpg"%} data-rel="prettyPhoto">
+                                        <img src={% static "example/latest6.jpg"%} alt="" />
+                                        <span class="frame-overlay"></span>
+                                    </a>
+                                </div>
+                                <div class="sliding">
+                                    <div class="inner-text">
+                                        <h4 class="title"><a href="./portfolio-single.html">Project title 6</a></h4>
+                                        <p>i'm still working on this part ~~</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('#our-projects').elastislide({
+                        imageW : 270,
+                        border : 0,
+                        minItems : 1,
+                        margin : 30
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+    <hr />
+
+        <div class="row">
+        <div class="span12 our-works"><h4>Recent Posts</h4></div>
+            <div class="span4">
+                <div class="media">
+                    <a class="pull-left" href="./blog-single.html">
+                        <img class="media-object" src={% static "example/sidebar4.png" %} alt="" />
+                        <span class="frame-overlay"></span>
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="/blog/1/">这是我在Unitech的第一篇博客</a></h4>
+                        <p>这是我在unitech上的第一篇博客 一直以来就像要做一个属于自己的网站，同时也想坚持...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="media">
+                    <a class="pull-left" href="./blog-single.html">
+                        <img class="media-object" src={% static "example/sidebar5.png" %} alt="" />
+                        <span class="frame-overlay"></span>
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="/blog/5/">shadowsocks科学上网的利器</a></h4>
+                        <p>毋庸置疑，shadowsocks已经成为祖国大陆地区科学上网不可或缺的利器...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="media">
+                    <a class="pull-left" href="./blog-single.html">
+                        <img class="media-object" src={% static "example/sidebar6.png" %} alt="" />
+                        <span class="frame-overlay"></span>
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="/blog/5">数据图表制作的超级武器</a></h4>
+                        <p>Highcharts 是一个用纯JavaScript编写的一个图表库， 能够很简单便捷的在web网站...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span9"> <br></div>
+
+            <div class="span4">
+                <div class="media">
+                    <a class="pull-left" href="./blog-single.html">
+                        <img class="media-object" src={% static "example/sidebar4.png" %} alt="" />
+                        <span class="frame-overlay"></span>
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="/blog/2">Unitech建设进行中，一些思考和改进 </a></h4>
+                        <p>之前对这个个人网站的规划是教程，视频，博客三个方面，这些天一直在考虑，教程...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="media">
+                    <a class="pull-left" href="./blog-single.html">
+                        <img class="media-object" src={% static "example/sidebar5.png" %} alt="" />
+                        <span class="frame-overlay"></span>
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="/blog/6/">html页面显示div源代码(亲测)</a></h4>
+                        <p>昨天写了篇关于Highcharts图表的博客，过程中想在页面上显示div标签源码，比如...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="media">
+                    <a class="pull-left" href="./blog-single.html">
+                        <img class="media-object" src={% static "example/sidebar6.png" %} alt="" />
+                        <span class="frame-overlay"></span>
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="/blog/3/">机器学习初探</a></h4>
+                        <p>机器学习初探</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--div class="span9"> <br></div>
+
+            <div class="span4">
+                <div class="media">
+                    <a class="pull-left" href="./blog-single.html">
+                        <img class="media-object" src={% static "example/sidebar4.png" %} alt="" />
+                        <span class="frame-overlay"></span>
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="/blog/3/">机器学习初探</a></h4>
+                        <p>机器学习初探</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="media">
+                    <a class="pull-left" href="./blog-single.html">
+                        <img class="media-object" src={% static "example/sidebar5.png" %} alt="" />
+                        <span class="frame-overlay"></span>
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="./blog-single.html">Phasellus Blandit Cursus</a></h4>
+                        <p>Cras sit amet arcu ante, sed adipiscing nibh quisque vitae turpis sit amet dui condimentum</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="media">
+                    <a class="pull-left" href="./blog-single.html">
+                        <img class="media-object" src={% static "example/sidebar6.png" %} alt="" />
+                        <span class="frame-overlay"></span>
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="./blog-single.html">Phasellus Blandit Cursus</a></h4>
+                        <p>Cras sit amet arcu ante, sed adipiscing nibh quisque vitae turpis sit amet dui condimentum</p>
+                    </div>
+                </div>
+            </div-->
+        </div>
+
+        
+
+    <hr />
+
+
+        <div class="row">
+        <div class="span12 our-works"><h4>Recent Projects</h4></div>
+        <div class="span12">
+            <div id="our-projects-2" class="carousel bttop">
+                <div class="carousel-wrapper">
+                    <ul class="portfolio">
+                        <li>
+                            <article>
+                                <div class="inner-image">
+                                    <a href={% static "example/view.jpg"%} data-rel="prettyPhoto">
+                                        <img src={% static "example/latest1.jpg"%} alt="" />
+                                        <span class="frame-overlay"></span>
+                                    </a>
+                                </div>
+                                <div class="sliding">
+                                    <div class="inner-text">
+                                        <h4 class="title"><a href="./portfolio-single.html">Project title 1</a></h4>
+                                        <p>i'm still working on this part ~~</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div class="inner-image">
+                                    <a href={% static "example/view.jpg"%} data-rel="prettyPhoto">
+                                        <img src={% static "example/latest2.jpg"%} alt="" />
+                                        <span class="frame-overlay"></span>
+                                    </a>
+                                </div>
+                                <div class="sliding">
+                                    <div class="inner-text">
+                                        <h4 class="title"><a href="./portfolio-single.html">Project title 2</a></h4>
+                                        <p>i'm still working on this part ~~</p>
+
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div class="inner-image">
+                                    <a href={% static "example/view.jpg"%} data-rel="prettyPhoto">
+                                        <img src={% static "example/latest3.jpg"%} alt="" />
+                                        <span class="frame-overlay"></span>
+                                    </a>
+                                </div>
+                                <div class="sliding">
+                                    <div class="inner-text">
+                                        <h4 class="title"><a href="./portfolio-single.html">Project title 3</a></h4>
+                                        <p>i'm still working on this part ~~</p>
+
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div class="inner-image">
+                                    <a href={% static "example/view.jpg"%} data-rel="prettyPhoto">
+                                        <img src={% static "example/latest4.jpg"%} alt="" />
+                                        <span class="frame-overlay"></span>
+                                    </a>
+                                </div>
+                                <div class="sliding">
+                                    <div class="inner-text">
+                                        <h4 class="title"><a href="./portfolio-single.html">Project title 4</a></h4>
+                                        <p>i'm still working on this part ~~</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div class="inner-image">
+                                    <a href={% static "example/view.jpg"%} data-rel="prettyPhoto">
+                                        <img src={% static "example/latest5.jpg"%} alt="" />
+                                        <span class="frame-overlay"></span>
+                                    </a>
+                                </div>
+                                <div class="sliding">
+                                    <div class="inner-text">
+                                        <h4 class="title"><a href="./portfolio-single.html">Project title 5</a></h4>
+                                        <p>i'm still working on this part ~~</p>
+
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <div class="inner-image">
+                                    <a href={% static "example/view.jpg"%} data-rel="prettyPhoto">
+                                        <img src={% static "example/latest6.jpg"%} alt="" />
+                                        <span class="frame-overlay"></span>
+                                    </a>
+                                </div>
+                                <div class="sliding">
+                                    <div class="inner-text">
+                                        <h4 class="title"><a href="./portfolio-single.html">Project title 6</a></h4>
+                                        <p>i'm still working on this part ~~</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('#our-projects-2').elastislide({
+                        imageW : 270,
+                        border : 0,
+                        minItems : 1,
+                        margin : 30
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+
+
+
+        <hr />
+        <div class="row">
+            <div class="span12">
+                <ul class="thumbnails">
+                    
+                    <li class="span6">
+                        <!--a href={% static "example/PickingaProgrammingLangauge_big.png"%} data-rel="prettyPhoto" class="thumbnail">
+                            <img src={% static "example/PickingaProgrammingLangauge.png"%} alt="" />
+                            <span class="frame-overlay"></span>
+                        </a-->
+                        <div id="container2" style="width: 100%; height: 450px; margin: 500 auto"></div>
+                    </li>
+                    
+                    <li class="span3">
+                        <a href={% static "images/stock_chart.jpeg"%} data-rel="prettyPhoto" class="thumbnail">
+                            <img src={% static "images/stock_chart_1.jpeg"%} alt="" />
+                            <span class="frame-overlay">line chart 示例</span>
+                        </a>
+                    </li>
+                    
+                    <li class="span3">
+                        <a href={% static "images/bar_chart.jpeg"%} data-rel="prettyPhoto" class="thumbnail">
+                            <img src={% static "images/bar_chart_1.jpeg"%} alt="" />
+                            <span class="frame-overlay"></span>
+                        </a>
+                    </li>
+                    
+                    <li class="span3">
+                        <a href={% static "images/pie_chart.jpeg"%} data-rel="prettyPhoto" class="thumbnail">
+                            <img src={% static "images/pie_chart_1.jpeg"%} alt="" />
+                            <span class="frame-overlay"></span>
+                        </a>
+                    </li>
+                    
+                    <li class="span3">
+                        <a href={% static "images/chart.jpeg"%} data-rel="prettyPhoto" class="thumbnail">
+                            <img src={% static "images/chart_1.jpeg"%} alt="" />
+                            <span class="frame-overlay"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12 testimonials">
+                <h4>免责声明</h4>
+            </div>
+            <div class="span4">
+                <p>
+                    <strong>Unitech</strong> 为非盈利站点，提供的内容仅用于学习，不能保证内容一定正确。
+                    通过使用本站进行学习随之而来的风险与本站无关。
+                    当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+                    版权所有，保留一切权利。<strong>Unitech</strong> 的所有内容仅供测试，
+                    是以学习知识和分享知识为目的，对任何法律问题及风险不承担任何责任。
+                </p>
+            </div>
+            <div class="span8">
+                <!--testimonals-->
+                <div id="testimonial" class="carousel bttop">
+                    <div class="carousel-wrapper">
+                        <ul class="testimonials">
+                            <li>
+                                <img src={% static "images/pic1.png"%} alt="" />
+                                <p>
+                                    I believe that everything happens for a reason. People change so that you can learn to let go, things go wrong so that you appreciate them when they're right, you believe lies so you eventually learn to trust no one but yourself, and sometimes good things fall apart so better things can fall together.
+                                </p>
+                                <h4>Bill Que <small>Programmer</small></h4>
+                            </li>
+                            <li>
+                                <img src={% static "images/pic2.png"%} alt="" />
+                                <p>
+                                    Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.
+                                </p>
+                                <h4>Monica Zhang <small>Designer</small></h4>
+                            </li>
+                            <li>
+                                <img src={% static "images/pic3.png"%} alt="" />
+                                <p>
+                                   The opposite of love is not hate, it's indifference. The opposite of art is not ugliness, it's indifference. The opposite of faith is not heresay, it's indifference. And the opposite of life is not death, it's indifference.
+                                </p>
+                                <h4>Edison Wang <small>Architecture</small></h4>
+                            </li>
+                            <li>
+                                <img src={% static "images/pic4.jpg"%} alt="" />
+                                <p>
+                                    I am enough of an artist to draw freely upon my imagination. Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.
+                                </p>
+                                <h4>Polo Ying<small>Negotiator</small></h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('#testimonial').elastislide({
+                            imageW  : 740,
+                            margin  : 30
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <p><img src={% static "example/logo.png"%} alt="" /></p>
+                <address>
+                    <p><i class="icon-map-marker"></i> Hunan road 2nd, No.87, Guanghan, 618300</p>
+                    <p><i class="icon-phone"></i> (123) 456-7890</p>
+                    <p><i class="icon-mobile-2"></i> (123) 456-7890</p>
+                    <p><i class="icon-mail-3"></i> <a href="mailto:bill.qjh@gmail.com">bill.qjh@gmail.com</a></p>
+                </address>
+            </div>
+            <div class="span8">
+                <div class="row">
+                    <div class="span8"></div>
+                    <div class="span8">
+
+                    </div>
+                </div>
+            </div>
+            <div class="span4">
+                <p class="heading">About Us</p>
+                <p>我们的理念是，通过自己的努力，走向优秀与卓越；通过我们的坚持，让世界一点点改变。 </p>
+                <p class="heading">Subscribe</p>
+                <p>Keep updated with our news. Your email is safe with us!</p>
+                <div class="input-append">
+                    <input type="text" placeholder="Not Ready Yet" class="span2" />
+                    <button type="button" class="btn btn-inverse">Subscribe!</button>
+                </div>
+            </div>
+            <div class="span4">
+                <p class="heading">Company</p>
+                <ul class="footer-navigate">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/course/">Courses</a></li>
+                    <li><a href="/Blog/">Blogs</a></li>
+                    <li><a href="/contact/">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--footer menu-->
+<section id="footer-menu">
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <p class="copyright">Copyright &copy; 2014.Unitech Co.ltd All rights reserved.<a target="_blank" href="#"> </a></p>
+            </div>
+            <div class="span8 hidden-phone">
+                <ul class="pull-right">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!--
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+-->
+
+<script type="text/javascript">
+    $(function () {
+
+    // Give the points a 3D feel by adding a radial gradient
+    Highcharts.getOptions().colors = $.map(Highcharts.getOptions().colors, function (color) {
+        return {
+            radialGradient: {
+                cx: 0.4,
+                cy: 0.3,
+                r: 0.5
+            },
+            stops: [
+                [0, color],
+                [1, Highcharts.Color(color).brighten(-0.2).get('rgb')]
+            ]
+        };
+    });
+
+    // Set up the chart
+    var chart = new Highcharts.Chart({
+        chart: {
+            
+            renderTo: 'container2',
+            margin: 100,
+            type: 'scatter',
+            options3d: {
+                enabled: true,
+                alpha: 10,
+                beta: 30,
+                depth: 250,
+                viewDistance: 5,
+                fitToPlot: false,
+                frame: {
+                    bottom: { size: 1, color: 'rgba(0,0,0,0.02)' },
+                    back: { size: 1, color: 'rgba(0,0,0,0.04)' },
+                    side: { size: 1, color: 'rgba(0,0,0,0.06)' }
+                }
+            }
+        },
+        credits: {
+                enabled: false
+                },
+        title: {
+            text: 'Draggable box'
+        },
+        subtitle: {
+            text: 'Click and drag the plot area to rotate in space'
+        },
+        plotOptions: {
+            scatter: {
+                width: 10,
+                height: 10,
+                depth: 10
+            }
+        },
+        yAxis: {
+            min: 0,
+            max: 10,
+            title: null
+        },
+        xAxis: {
+            min: 0,
+            max: 10,
+            gridLineWidth: 1
+        },
+        zAxis: {
+            min: 0,
+            max: 10,
+            showFirstLabel: false
+        },
+        legend: {
+            enabled: false
+        },
+        series: [{
+            name: 'Reading',
+            colorByPoint: true,
+            data: [[1, 6, 5], [8, 7, 9], [1, 3, 4], [4, 6, 8], [5, 7, 7], [6, 9, 6], [7, 0, 5], [2, 3, 3], [3, 9, 8], [3, 6, 5], [4, 9, 4], [2, 3, 3], [6, 9, 9], [0, 7, 0], [7, 7, 9], [7, 2, 9], [0, 6, 2], [4, 6, 7], [3, 7, 7], [0, 1, 7], [2, 8, 6], [2, 3, 7], [6, 4, 8], [3, 5, 9], [7, 9, 5], [3, 1, 7], [4, 4, 2], [3, 6, 2], [3, 1, 6], [6, 8, 5], [6, 6, 7], [4, 1, 1], [7, 2, 7], [7, 7, 0], [8, 8, 9], [9, 4, 1], [8, 3, 4], [9, 8, 9], [3, 5, 3], [0, 2, 4], [6, 0, 2], [2, 1, 3], [5, 8, 9], [2, 1, 1], [9, 7, 6], [3, 0, 2], [9, 9, 0], [3, 4, 8], [2, 6, 1], [8, 9, 2], [7, 6, 5], [6, 3, 1], [9, 3, 1], [8, 9, 3], [9, 1, 0], [3, 8, 7], [8, 0, 0], [4, 9, 7], [8, 6, 2], [4, 3, 0], [2, 3, 5], [9, 1, 4], [1, 1, 4], [6, 0, 2], [6, 1, 6], [3, 8, 8], [8, 8, 7], [5, 5, 0], [3, 9, 6], [5, 4, 3], [6, 8, 3], [0, 1, 5], [6, 7, 3], [8, 3, 2], [3, 8, 3], [2, 1, 6], [4, 6, 7], [8, 9, 9], [5, 4, 2], [6, 1, 3], [6, 9, 5], [4, 8, 2], [9, 7, 4], [5, 4, 2], [9, 6, 1], [2, 7, 3], [4, 5, 4], [6, 8, 1], [3, 4, 0], [2, 2, 6], [5, 1, 2], [9, 9, 7], [6, 9, 9], [8, 4, 3], [4, 1, 7], [6, 2, 5], [0, 4, 9], [3, 5, 9], [6, 9, 1], [1, 9, 2]]
+        }]
+    });
+
+
+    // Add mouse events for rotation
+    $(chart.container).on('mousedown.hc touchstart.hc', function (eStart) {
+        eStart = chart.pointer.normalize(eStart);
+
+        var posX = eStart.pageX,
+            posY = eStart.pageY,
+            alpha = chart.options.chart.options3d.alpha,
+            beta = chart.options.chart.options3d.beta,
+            newAlpha,
+            newBeta,
+            sensitivity = 5; // lower is more sensitive
+
+        $(document).on({
+            'mousemove.hc touchdrag.hc': function (e) {
+                // Run beta
+                newBeta = beta + (posX - e.pageX) / sensitivity;
+                chart.options.chart.options3d.beta = newBeta;
+
+                // Run alpha
+                newAlpha = alpha + (e.pageY - posY) / sensitivity;
+                chart.options.chart.options3d.alpha = newAlpha;
+
+                chart.redraw(false);
+            },
+            'mouseup touchend': function () {
+                $(document).off('.hc');
+            }
+        });
+    });
+
+});
+</script>
+
+</body>
+</html>

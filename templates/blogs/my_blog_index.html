@@ -1,0 +1,127 @@
+{% extends "./my_blog_base.html" %}
+{% load static %}
+
+
+
+{% block post_title %}
+    <blockquote>
+                <h5>To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.</h5>
+                <p align="right"><small>Ralph Waldo Emerson</small></p>
+                </blockquote>
+{% endblock %}
+
+{% block tags %}
+
+    {% for post in posts %}
+        <a href="#"><i class="icon-tag icon-white"></i>{{post.tags.name}}</a>
+    {% endfor %}
+      
+{% endblock %}
+
+
+
+{% block posts %}
+    <hr />
+    {% for post in posts %}
+        <article class="blog-post">
+            <div class="row">
+                <div class="span3">
+                    <div class="post-media">
+                        {% if post.image %}
+                            <img src={{ post.image.url }} %} alt="" />
+                        {% elif post.tags.name == "website_log" %}
+                            <img src={% static "example/post_pics/big_head/header_website.jpg" %} alt="" />
+                        {% elif post.tags.name == "web_development" %}
+                            <img src={% static "example/post_pics/big_head/web_development.jpg" %} alt="" />  
+                        {% elif post.tags.name == "data_analyze" %}
+                            <img src={% static "example/post_pics/big_head/data_analysis.jpg" %} alt="" />
+                        {% elif post.tags.name == "machine_learning" %}
+                            <img src={% static "example/post_pics/big_head/machine_learning.jpg" %} alt="" />
+                        {% elif post.tags.name == "penetration_test" %}
+                            <img src={% static "example/post_pics/big_head/penetration_test.jpg" %} alt="" />
+                        {% else %}
+                            <img src={% static "example/big_head.jpg" %} alt="" />
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="span5">
+                    <h3 class="post-title"><a href="/blog/{{ post.id }}/">{{ post.title }}</a></h3>
+                    <ul class="post-meta">
+                        <li><i class="icon-calendar"></i> <a href="#">
+                        {{ post.publish_time.date }}</a></li>
+                        <li><i class="icon-user"></i> <a href="#">Bill</a></li>
+                        <li><i class="icon-list-alt"></i> 
+                            {% for tag in tags %}
+                                {% for p in tag.posts.all %}
+                                    {% if p == post %}
+                                    <a href="#">{{tag.name}}</a>,
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}<a href="#">python</a>
+                        </li>
+                        <li>
+                        <i class="icon-tag"></i> <a href="#">{{ post.tags.name }}</a>
+                        </li>
+                        <li><i class="icon-comment"></i> <a href="#">
+                        {{post.comment_num}} Comments</a></li>
+                    </ul>
+                    <div class="post-content">
+                        {{ post.content|truncatechars:200}}
+                    </div><br>
+                    <p>
+                        <a href="/blog/{{post.id}}" class="btn btn-large btn-welcome">
+                        <i class="icon-chevron-right"></i>Continue reading</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        <hr />
+    {% endfor %}
+{% endblock %}
+
+<!--> ...blog categroy side bar...<-->
+
+{% block blog_category_log %}
+    {% for post in posts %}
+        {% if post.tags.name == 'website_log' %}
+            <li><a href="/blog/{{ post.id }}/">{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
+
+{% block blog_category_web %}
+    {% for post in posts %}
+        {% if post.tags.name == 'web_development' %}
+            <li><a href="/blog/{{ post.id }}/">{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+
+{% block blog_category_data %}
+    {% for post in posts %}
+        {% if post.tags.name == 'data_analyze' %}
+            <li><a href="/blog/{{ post.id }}/">{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+
+{% block blog_category_machine %}
+    {% for post in posts %}
+        {% if post.tags.name == 'machine_learning' %}
+            <li><a href="/blog/{{ post.id }}/">{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %}                             
+{% endblock %}
+
+
+
+{% block blog_category_penetration %}
+    {% for post in posts %}
+        {% if post.tags.name == 'penetration_test' %}
+            <li><a href="/blog/{{ post.id }}/">{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %} 
+{% endblock %}
+
+<!--> ...blog categroy side bar...<-->

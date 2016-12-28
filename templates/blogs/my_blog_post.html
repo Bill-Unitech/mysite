@@ -1,0 +1,199 @@
+{% extends "./my_blog_base.html" %}
+{% load static %}
+
+
+
+{% block post_title %}
+<a href="/blog/{{ post.id }}/">{{ post.title }}</a>
+{% endblock %}
+
+{% block posts %}
+    {% if post.image_1170 %}
+        <p><img src= {{ post.image_1170.url }} alt="photo"  /></p>
+    {% endif %}
+
+    <ul class="post-meta">
+        <li><i class="icon-calendar"></i> <a href="#">
+        {{ post.publish_time.date }}</a></li>
+        <li><i class="icon-user"></i> <a href="#">Bill</a></li>
+                        <li><i class="icon-list-alt"></i> 
+                            {% for tag in tags %}
+                                {% for p in tag.posts.all %}
+                                    {% if p == post %}
+                                    <a href="#">{{ tag.name }}</a>,
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}<a href="#">python</a>
+                        </li>
+        <!--li><i class="icon-list-alt"></i> <a href="#">News</a>, <a href="#">Web Design</a></li-->
+        <li><i class="icon-tag"></i> <a href="#">{{ post.tags.name }}</a></li>
+        <li><i class="icon-comment"></i> <a href="#">{{ comment_num }} Comments</a></li>
+    </ul>
+
+
+    {{ post.content|safe }}
+
+    <!--comments-->
+    	<hr />
+
+        <h3>{{ comment_num }} Comments</h3>
+
+        <div class="comments">
+            <ul class="comments-list">
+                <li class="comments_li">
+                    <!--div class="comment clearfix">
+                        <img src={% static "images/avatar.png" %} alt="avatar" class="avatar" />
+                        <p class="meta">Designmd says:<br /><small>May 18, 2012 </small></p>
+                        <div class="textarea">
+                            <p>this is a stupid comment , very very stupid. </p>
+                        </div>
+                    </div>
+                    <div class="comment clearfix">
+                        <img src={% static "images/avatar.png" %} alt="avatar" class="avatar" />
+                        <p class="meta">Designmd says:<br /><small>May 18, 2012 </small></p>
+                        <div class="textarea">
+                            <p>this is a stupid comment , very very stupid. </p>
+                        </div>
+                    </div-->
+                    {% for comment in comments %}
+                        {% if comment.post.id == post.id %}
+                            <div class="comment clearfix">
+                                <img src={% static "images/avatar.png" %} alt="avatar" class="avatar" />
+                                <p class="meta">{{ comment.name }} says:<br /><small>May 18, 2012 </small></p>
+                                <div class="textarea">                            
+                                        {% if comment.post.name == post.name %}
+                                            <p>{{ comment.content }}</p>
+                                        {% endif %}
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    
+               	</li>
+                
+            </ul>
+        </div>
+
+        <hr />
+        
+        <!--commetns form-->
+        <h3>Leave A Reply</h3>
+
+        <form name="contact" method="post" action="/blog/{{post.id}}/" class="af-form" id="af-form" />
+        {% csrf_token %}
+
+                    
+                    
+                    <div class="af-outer af-required pull-left">
+                        <div class="af-inner">
+                            <label for="name" id="name_label">Your Name:</label>
+                            {{ comment_form.name }}
+                            <!--input type="text" name="name" id="name" size="30" value="" class="text-input span4" />
+                            <label class="error" for="name" id="name_error">Name is required.</label-->
+                        </div>
+                    </div>
+                    <div class="af-outer af-required pull-right">
+                        <div class="af-inner">
+                            <label for="email" id="email_label">Your Email:</label>
+                            {{ comment_form.email }}
+                            <!--input type="text" name="email" id="email" size="30" value="" class="text-input span4" />
+                            <label class="error" for="email" id="email_error">Email is required.</label-->
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="af-outer af-required">
+                        <div class="af-inner">
+                            <label for="input-message" id="message_label">Your Message:</label>
+                            {{ comment_form.content }}
+                            <!--textarea name="message" id="input-message" cols="30" class="text-input span8"></textarea>
+                            <label class="error" for="input-message" id="message_error">Message is required.</label-->
+                        </div>
+                    </div>
+                    <input type="submit" name="send" value="send message" class="form-button btn btn-welcome btn-large">
+                    <!--div class="af-outer af-required">
+                        <div class="af-inner">
+                            <input type="submit" class="form-button btn btn-welcome btn-large" value="Send Message!" />
+                        </div>
+                    </div-->
+                </form>
+
+        <!--form name="comment" method="post" action="" class="af-form" id="af-form" />
+            <div class="row">
+                <div class="span4">
+                    <div class="af-outer af-required">
+                        <div class="af-inner">
+                            <label for="name" id="name_label">Your Name:</label>
+                            <input type="text" name="name" id="name" size="30" value="" class="text-input span4" />
+                            <label class="error" for="name" id="name_error">Name is required.</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="af-outer af-required">
+                        <div class="af-inner">
+                            <label for="email" id="email_label">Your Email:</label>
+                            <input type="text" name="email" id="email" size="30" value="" class="text-input span4" />
+                            <label class="error" for="email" id="email_error">Email is required.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="af-outer af-required">
+                <div class="af-inner">
+                    <label for="input-message" id="message_label">Your Message:</label>
+                    <textarea name="message" id="input-message" cols="30" class="text-input span8"></textarea>
+                    <label class="error" for="input-message" id="message_error">Message is required.</label>
+                </div>
+            </div>
+            <div class="af-outer af-required">
+                <div class="af-inner">
+                    <input type="submit" name="submit" class="form-button btn btn-large btn-welcome" id="submit_btn" value="Send Message!" />
+                </div>
+            </div>
+        </form-->
+
+{% endblock %}
+
+<!--> ...blog categroy side bar...<-->
+
+{% block blog_category_log %}
+    {% for post in posts %}
+        {% if post.tags.name == 'website_log' %}
+            <li><a href="/blog/{{ post.id }}/">{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+
+{%  block blog_category_web %}
+    {% for post in posts %}
+        {% if post.tags.name == 'web_development' %}
+            <li><a href="/blog/{{ post.id }}/">{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+
+{%  block blog_category_data %}
+    {% for post in posts %}
+        {% if post.tags.name == 'data_analyze' %}
+            <li><a href="/blog/{{ post.id }}/">{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+
+{%  block blog_category_machine %}
+    {% for post in posts %}
+        {% if post.tags.name == 'machine_learning' %}
+            <li><a href="/blog/{{ post.id }}/">{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+
+{%  block blog_category_penetration %}
+    {% for post in posts %}
+        {% if post.tags.name == 'penetration_test' %}
+            <li><a href="/blog/{{ post.id }}/">{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+
+<!--> ...blog categroy side bar...<-->
