@@ -77,6 +77,43 @@
         </article>
         <hr />
     {% endfor %}
+
+    <!-- ...code for pagination...-->
+
+    <div class="pagination pagination-centered">
+        <ul>
+            {% if posts.has_previous %}
+                <li><a href="?page={{ posts.previous_page_number }}">&laquo;</a></li>
+            {% else %}
+                <li class="disabled"><a href="#">&laquo;</a></li>
+            {% endif %}
+
+            <li><a href="#">
+                Page {{ posts.number }} of {{ posts.paginator.num_pages }}.</a>
+            </li>
+
+            {% if posts.has_next %}
+                <li><a href="?page={{ posts.next_page_number }}">&raquo;</a></li>
+            {% else %}
+                <li class="disabled"><a href="#">&raquo;</a></li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <!--div class="pagination pagination-centered">
+        <ul>
+            <li class="disabled"><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div-->
+
+
+
 {% endblock %}
 
 <!--> ...blog categroy side bar...<-->

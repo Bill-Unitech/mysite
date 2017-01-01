@@ -3,12 +3,26 @@ from django.shortcuts import render_to_response, render, get_object_or_404
 from django.views.decorators.csrf import csrf_protect
 from .forms import CommentForm
 
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 import datetime
 
 
 # python tutorials:
 def my_blog_index(request):
     posts = Post.objects.all()
+    paginator = Paginator(posts, 5)
+    page = request.GET.get('page')
+
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        posts = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        posts = paginator.page(paginator.num_pages)
+
     comments = Comment.objects.all()
     tags = Tag.objects.all()
     context = request
