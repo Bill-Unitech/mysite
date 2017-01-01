@@ -399,7 +399,7 @@
 
         <div class="row">
         <div class="span12 our-works"><h4>Recent Posts</h4></div>
-            <div class="span4">
+            <!--div class="span4">
                 <div class="media">
                     <a class="pull-left" href="./blog-single.html">
                         <img class="media-object" src={% static "example/sidebar4.png" %} alt="" />
@@ -479,9 +479,58 @@
                 </div>
             </div>
 
-            <!--div class="span9"> <br></div>
+            <div class="span9"> <br></div-->
+            
 
+            {% for post in posts_a %}
+            <div class="span4" >
+                <div class="media">
+                    <a class="pull-left" href="./blog-single.html">
+                        <img class="media-object" src={% static "example/sidebar4.png" %} alt="" />
+                        <span class="frame-overlay"></span>
+                    </a>
+                    <div class="media-body" >
+                        <h4 class="media-heading" ><a href="/blog/3/" style="color:#E84807;">{{ post.title|safe }}</a></h4>
+                        <p>{{ post.publish_time }} <br><small>{{ post.tags }}</small></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="span9"> <br></div>
+
+            {% for post in posts_b %}
             <div class="span4">
+                <div class="media">
+                    <a class="pull-left" href="./blog-single.html">
+                        <img class="media-object" src={% static "example/sidebar5.png" %} alt="" />
+                        <span class="frame-overlay"></span>
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="/blog/3/" style="color:#E84807;">{{ post.title }}</a></h4>
+                        <p>{{ post.publish_time }} <br><small>{{ post.tags }}</small></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="span9"> <br></div>
+
+            {% for post in posts_c %}
+            <div class="span4">
+                <div class="media">
+                    <a class="pull-left" href="./blog-single.html">
+                        <img class="media-object" src={% static "example/sidebar6.png" %} alt="" />
+                        <span class="frame-overlay"></span>
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="/blog/3/" style="color:#E84807;">{{ post.title }}</a></h4>
+                        <p>{{ post.publish_time }} <br><small>{{ post.tags }}</small></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="span9"> <br></div>
+
+            <!--div class="span4">
                 <div class="media">
                     <a class="pull-left" href="./blog-single.html">
                         <img class="media-object" src={% static "example/sidebar4.png" %} alt="" />

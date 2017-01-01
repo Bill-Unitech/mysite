@@ -12,6 +12,7 @@ import datetime
 def my_blog_index(request):
     posts = Post.objects.all()
     posts_list = Post.objects.all()
+
     paginator = Paginator(posts_list, 5)
     page = request.GET.get('page')
 
