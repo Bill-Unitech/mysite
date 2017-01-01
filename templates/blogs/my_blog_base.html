@@ -250,16 +250,21 @@
                             </div>
                         </div>
                     </div>
+
+                    
+
                     <div class="accordion-group">
                         <div class="accordion-heading">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse5">
                                 <i class="icon-plus icon-white"></i>
-                                渗透测试
+                                学术写作
                             </a>
                         </div>
                         <div id="collapse5" class="accordion-body collapse">
                             <div class="accordion-inner">
                                 <ul class="icons ul-list-2">
+                                    {% block blog_academic_writing %}
+                                    {% endblock %}
                                     {% block blog_category_penetration %}
                                     {% endblock %}
                                 </ul>
