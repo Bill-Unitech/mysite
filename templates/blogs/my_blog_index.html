@@ -22,7 +22,7 @@
 
 {% block posts %}
     <hr />
-    {% for post in posts %}
+    {% for post in posts_list %}
         <article class="blog-post">
             <div class="row">
                 <div class="span3">
@@ -82,18 +82,18 @@
 
     <div class="pagination pagination-centered">
         <ul>
-            {% if posts.has_previous %}
-                <li><a href="?page={{ posts.previous_page_number }}">&laquo;</a></li>
+            {% if posts_list.has_previous %}
+                <li><a href="?page={{ posts_list.previous_page_number }}">&laquo;</a></li>
             {% else %}
                 <li class="disabled"><a href="#">&laquo;</a></li>
             {% endif %}
 
             <li><a href="#">
-                Page {{ posts.number }} of {{ posts.paginator.num_pages }}.</a>
+                Page {{ posts_list.number }} of {{ posts_list.paginator.num_pages }}.</a>
             </li>
 
-            {% if posts.has_next %}
-                <li><a href="?page={{ posts.next_page_number }}">&raquo;</a></li>
+            {% if posts_list.has_next %}
+                <li><a href="?page={{ posts_list.next_page_number }}">&raquo;</a></li>
             {% else %}
                 <li class="disabled"><a href="#">&raquo;</a></li>
             {% endif %}

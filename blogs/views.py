@@ -11,17 +11,18 @@ import datetime
 # python tutorials:
 def my_blog_index(request):
     posts = Post.objects.all()
-    paginator = Paginator(posts, 5)
+    posts_list = Post.objects.all()
+    paginator = Paginator(posts_list, 5)
     page = request.GET.get('page')
 
     try:
-        posts = paginator.page(page)
+        posts_list = paginator.page(page)
     except PageNotAnInteger:
         # If page is not an integer, deliver first page.
-        posts = paginator.page(1)
+        posts_list = paginator.page(1)
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
-        posts = paginator.page(paginator.num_pages)
+        posts_list = paginator.page(paginator.num_pages)
 
     comments = Comment.objects.all()
     tags = Tag.objects.all()
@@ -31,6 +32,7 @@ def my_blog_index(request):
                                 'posts': posts,
                                 'comments': comments,
                                 'tags': tags,
+                                'posts_list': posts_list,
                               },
                               context)
 
