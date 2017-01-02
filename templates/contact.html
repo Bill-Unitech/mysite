@@ -159,11 +159,19 @@
         
         <div class="row">
             
-            <div class="span12" align="center">
+            <div class="span8" align="center">
 
                 <div id="container2" style="width: 100%; height: 400px; margin: 500 auto"></div>
             
-           </div>
+            </div>
+
+            <div class="span4" align="center">
+
+                <div id="container3" style="width: 100%; height: 400px; margin: 500 auto"></div>
+            
+            </div>
+
+
         </div><br><hr id="test" /><br>
 
 
@@ -269,7 +277,7 @@
             <div class="span4">
                 <p class="heading">Company</p>
                 <ul class="footer-navigate">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Home{{num_academic_writing}}</a></li>
                     <li><a href="/course/">Courses</a></li>
                     <li><a href="/Blog/">Blogs</a></li>
                     <li><a href="/contact/">Contacts</a></li>
@@ -340,20 +348,81 @@
         },
         series: [{
             name: '浏览量',
-            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+            data: [0,0,0,0,0,0,0,0,0,0,0,0,]
         }, {
             name: '留言数量',
-            data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+            data: [0,0,0,0,0,0,0,0,0,0,0,0,]
         }, {
             name: '博客文章数',
-            data: [5, 6, 7 ]
+            data: [9,0,0,0,0,0,0,0,0,0,0,0,]
         }, {
             name: '视频总数',
-            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            data: [6,0,0,0,0,0,0,0,0,0,0,0,]
         }]
     });
 });
 
 </script>
+
+<script type="text/javascript">
+    var num_website_log = {{ num_website_log|safe }}
+    var num_web_development = {{ num_web_development|safe }}
+    var num_data_analyze = {{ num_data_analyze|safe }}
+    var num_machine_learning = {{ num_machine_learning|safe }}
+    var num_penetration_test = {{ num_penetration_test|safe }}
+    var num_academic_writing = {{ num_academic_writing|safe }}
+    var num_python_technique = {{ num_python_technique|safe }}
+
+    $(function () {
+
+        Highcharts.chart('container3', {
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45,
+                beta: 0
+            }
+        },
+        title: {
+            text: 'unitech.site博客与项目内容数量分析  2017'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            data: [
+                ['建站日志', num_website_log],
+                ['web开发', num_web_development],
+                {
+                    name: 'python',
+                    y: num_python_technique,
+                    sliced: true,
+                    selected: true
+                },
+                ['数据分析', num_data_analyze],
+                ['机器学习', num_machine_learning],
+                ['学术写作', num_academic_writing],
+                ['渗透测试', num_penetration_test]
+            ]
+        }]
+    });
+});
+
+</script>>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
 </body>
 </html>

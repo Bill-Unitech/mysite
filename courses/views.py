@@ -4,6 +4,8 @@ from .forms import MessageForm
 from django.views.decorators.csrf import csrf_protect
 from django.core.mail import send_mail
 from django.conf import settings
+from blogs.models import *
+import json
 
 # Create your views here.
 
@@ -20,10 +22,27 @@ def my_course_index(request):
 @csrf_protect
 def my_contact(request):
     theform = MessageForm()
-    c = {
-        'the_form': theform,
 
+
+    num_website_log = Post.objects.filter(tags__name='website_log').count()
+    num_web_development = Post.objects.filter(tags__name='web_development').count()
+    num_data_analyze = Post.objects.filter(tags__name='data_analyze').count()
+    num_machine_learning = Post.objects.filter(tags__name='machine_learning').count()
+    num_penetration_test = Post.objects.filter(tags__name='penetration_test').count()
+    num_academic_writing = Post.objects.filter(tags__name='academic_writing').count()
+    num_python_technique = Post.objects.filter(tags__name='python_technique').count()
+
+    c = {
+            'the_form': theform,
+            'num_website_log': num_website_log,
+            'num_web_development': num_web_development,
+            'num_data_analyze': num_data_analyze,
+            'num_machine_learning': num_machine_learning,
+            'num_penetration_test': num_penetration_test,
+            'num_academic_writing': num_academic_writing,
+            'num_python_technique': num_python_technique,
     }
+    
     return render(request, './contact.html', c)
 
 @csrf_protect
