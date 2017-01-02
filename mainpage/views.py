@@ -4,6 +4,14 @@ from django.template import RequestContext
 
 # Create your views here.
 def index(request):
+    if 'HTTP_X_FORWARDED_FOR' in request.META:
+        visitor_ip_addr = request.META['HTTP_X_FORWARDED_FOR']
+    else:
+        visitor_ip_addr = request.META['REMOTE_ADDR']
+    
+    print "11111111111"
+
+    print visitor_ip_addr
     posts = Post.objects.all()
     posts_a = posts[0:3]
     posts_b = posts[3:6]
