@@ -25,7 +25,7 @@ SECRET_KEY = '5-igp(--%tuy2d8x10bp0=)_$a#nw)3=eu2gji(@&266=6edx&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.31.169','127.0.0.1','unitech.site']
 
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_HOST_USER = '314046334@qq.com'

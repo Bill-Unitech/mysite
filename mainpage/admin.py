@@ -1,6 +1,5 @@
 from django.contrib import admin
 # Register your models here.
-from .models import Post, Tag
+from .models import Statics
 
-admin.site.register(Tag)
-admin.site.register(Post)
+admin.site.register(Statics)
