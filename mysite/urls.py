@@ -3,6 +3,7 @@ from django.contrib import admin
 from mainpage import views as mainpage_views
 from blogs import views as blog_views
 from courses import views as course_views
+from kidney_care import views as kidney_care_views
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -20,6 +21,9 @@ urlpatterns = [
     url(r'^contact/$', course_views.my_contact),
     #sending email
     url(r'^email/$', course_views.email),
+
+    #kidney care view
+    url(r'^kidney_care/$', kidney_care_views.kidney_care),
 ]
 
 if settings.DEBUG:
