@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />    
     
-    <link href="./css/bootstrap.min.css" rel="stylesheet" />
-    <link href="./css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href={% static "kidney_care/css/bootstrap.min.css"%} rel="stylesheet" />
+    <link href={% static "kidney_care/css/bootstrap-responsive.min.css"%} rel="stylesheet" />
     
     
-    <link href="./css/font-awesome.css" rel="stylesheet" />
+    <link href={% static "kidney_care/css/font-awesome.css"%} rel="stylesheet" />
     
-    <link href="./css/adminia.css" rel="stylesheet" /> 
-    <link href="./css/adminia-responsive.css" rel="stylesheet" /> 
+    <link href={% static "kidney_care/css/adminia.css"%} rel="stylesheet" /> 
+    <link href={% static "kidney_care/css/adminia-responsive.css"%} rel="stylesheet" /> 
     
-    <link href="./css/pages/dashboard.css" rel="stylesheet" /> 
+    <link href={% static "kidney_care/css/pages/dashboard.css"%} rel="stylesheet" /> 
     
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -40,7 +40,7 @@
 				<span class="icon-bar"></span> 				
 			</a>
 			
-			<a class="brand" href="./">Adminia Admin</a>
+			<a class="brand" href="/kidney_care/">Bill的健康管家</a>
 			
 			<div class="nav-collapse">
 			
@@ -54,7 +54,7 @@
 					<li class="dropdown">
 						
 						<a data-toggle="dropdown" class="dropdown-toggle " href="#">
-							Rod Howard <b class="caret"></b>							
+							Bill Que <b class="caret"></b>							
 						</a>
 						
 						<ul class="dropdown-menu">
@@ -450,16 +450,16 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./js/jquery-1.7.2.min.js"></script>
-<script src="./js/excanvas.min.js"></script>
-<script src="./js/jquery.flot.js"></script>
-<script src="./js/jquery.flot.pie.js"></script>
-<script src="./js/jquery.flot.orderBars.js"></script>
-<script src="./js/jquery.flot.resize.js"></script>
+<script src={% static "kidney_care/js/jquery-1.7.2.min.js" %}></script>
+<script src={% static "kidney_care/js/excanvas.min.js" %}></script>
+<script src={% static "kidney_care/js/jquery.flot.js"%}></script>
+<script src={% static "kidney_care/js/jquery.flot.pie.js"%}></script>
+<script src={% static "kidney_care/js/jquery.flot.orderBars.js"%}></script>
+<script src={% static "kidney_care/js/jquery.flot.resize.js"%}></script>
 
 
-<script src="./js/bootstrap.js"></script>
-<script src="./js/charts/bar.js"></script>
+<script src={% static "kidney_care/js/bootstrap.js"%}></script>
+<script src={% static "kidney_care/js/charts/bar.js"%}></script>
 
   </body>
 </html>
