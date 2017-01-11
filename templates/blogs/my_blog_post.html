@@ -188,6 +188,15 @@
     {% endfor %}
 {% endblock %}
 
+{% block blog_academic_writing %}
+    {% for post in posts %}
+        {% if post.tags.name == 'academic_writing' %}
+            <li><a href="/blog/{{ post.id }}/">{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %}  
+
+{% endblock %}
+
 {%  block blog_category_penetration %}
     {% for post in posts %}
         {% if post.tags.name == 'penetration_test' %}
